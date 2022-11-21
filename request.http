@@ -1,0 +1,19 @@
+//crete new product
+### 
+POST http://localhost:4000/api/v1/product/new
+Content-Type: application/json
+ {
+    "name": "product1",
+    "price":123,
+    "description":"very good", 
+    "category":"laptop",
+    "images": {
+        "public_id":"acv",
+        "url":"avas"
+    }
+ }
+
+//get all product
+###
+GET http://localhost:4000/api/v1/products
+Content-Type: application/json
