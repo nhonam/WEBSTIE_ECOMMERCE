@@ -5,9 +5,9 @@ const ErrorHander = require("../utils/errorhander");
 
 //create product - admin
 exports.createProduct =  catchAsyncErrors(async (req, res, next) => {
- 
+  // const token=req.cookies
     const product = await Product.create(req.body);
-
+    
     return res.status(201).json({
       success: true,
       product,
@@ -17,12 +17,13 @@ exports.createProduct =  catchAsyncErrors(async (req, res, next) => {
 //get all products
 exports.getAllProducts = catchAsyncErrors(async (req, res) => {
 
-  const resultPerPage =5;
+  const resultPerPage =10;
   const productsCount = await Product.countDocuments()
 
   const apiFeature = new ApiFeatures(Product.find(), req.query)
     .search()
-    .filter();
+    .filter()
+    .pagination(resultPerPage)
     let products = await apiFeature;
 
     let filteredProductsCount = products.length;

@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
     "bcryptjs": "^2.4.3",
     "body-parse": "^0.1.0",
     "bootstrap-react": "^0.5.0-alpha.14",
@@ -23,6 +24,8 @@
     "nodemon": "^2.0.20",
     "react-alert": "^7.0.3",
     "react-alert-template-basic": "^1.0.2",
+    "react-js-pagination": "^3.0.3",
+    "react-router-dom": "^6.4.3",
     "validator": "^13.7.0"
   }
 }
